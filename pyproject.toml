@@ -1,0 +1,14 @@
+[project]
+name = "timestral-demo"
+version = "0.1.0"
+requires-python = ">=3.11,<3.14"
+dependencies = ["numpy>=2,<3", "plotly>=6,<7", "torch>=2.4", "timestral"]
+
+[tool.uv.sources]
+timestral = { git = "https://github.com/mistralai/timestral.git", rev = "a534bdbd244d64f3d9d743f46c7bf6fc330ed4ff" }
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
